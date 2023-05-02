@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>계산기</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="calculator">
+		<div class="screen">
+			<input type="text" id="result">
+		</div>
+		<div class="buttons">
+			<button onclick="clearResult()">C</button>
+			<button onclick="deleteNumber()"><</button>
+			<button onclick="insertNumber('7')">7</button>
+			<button onclick="insertNumber('8')">8</button>
+			<button onclick="insertNumber('9')">9</button>
+			<button onclick="insertOperator('/')">/</button>
+			<button onclick="insertNumber('4')">4</button>
+			<button onclick="insertNumber('5')">5</button>
+			<button onclick="insertNumber('6')">6</button>
+			<button onclick="insertOperator('*')">*</button>
+			<button onclick="insertNumber('1')">1</button>
+			<button onclick="insertNumber('2')">2</button>
+			<button onclick="insertNumber('3')">3</button>
+			<button onclick="insertOperator('-')">-</button>
+			<button onclick="insertNumber('0')">0</button>
+			<button onclick="insertNumber('.')">.</button>
+			<button onclick="calculate()">=</button>
+			<button onclick="insertOperator('+')">+</button>
+		</div>
+	</div>
+	<script src="calculator.js"></script>
+</body>
+</html>

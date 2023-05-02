@@ -1,87 +1,67 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <style>
-            h1 {
-                color: black;
+        <title>계산기</title>
+        <script>
+            function addOutput(num) {
+                var display = document.getElementById("display");
+                display.value = display.value + num; 
             }
-            .intro { 
-                background-color: #fff;
-                color: red;
-                font-weight: bold;
-                font-size: 24px;
+            function calculate() {
+                var display = document.getElementById("display");
+                var result = eval(display.value);
+                var displayResult = document.getElementById("result");
+                displayResult.value = result;
             }
-            #main {
-                font-size: 24px;
+            function reset() {
+                var display = document.getElementById("display");
+                display.value = "";
+                var displayResult = document.getElementById("result");
+                displayResult.value = "";
             }
-            div > p {
-                color : red;
+            function del () {
+                var display = document.getElementById("display");
+                display.value = display.vavlue.substring(0,display.value.length=1);
             }
-            h1+p{ 
-                font-size: 16px;
-            }
-            h1~p{ 
-                color: black;
-            }
-            [href] {
-                color: purple;
-            }
-            [href= 'https://example.com'] {
-                font-size: 16px;
-
-            }
-            [class*='crimson'] { 
-                font-style: italic;
-                color: crimson;
-            }
-            ul {
-                font-size: 15px;
-            }
-            [class*=Div] {
-                font-size: 15px;
-                background-color: #d3d3d3;
-            }
-            [class*=css] {
-                font-size: 16px;
-                font-style: italic;
-        
-            }
-            [class*=단락] {
-                font-style: italic;
-            }
-            .txt_line {
-      width:100%;
-      padding:0 5px;
-      overflow:hidden;
-      text-overflow:ellipsis;
-      white-space:nowrap;
-      font-style: italic;
-  }
-
-        </style>
+        </script>
     </head>
     <body>
-        <div id="main">
-            <h1>CSS Selector Example</h1>
-            <p class="intro">Lorem ipsum</p>
-            <p class="crimson">이 요소는 단락 요소 입니다. 글자의 색 이름은 'crimson'입니다. font-style은 이탤릭입니다.</p>
-            <p>이 요소는 단락 요소 입니다.1</p>
-            <p>이 요소는 단락 요소 입니다.2</p>
-            <p>이 요소는 단락 요소 입니다.3</p>
-            <ul>
-                <li>unordered list 입니다. ul->li의 구조를 가집니다.1</li>
-                <li>unordered list 입니다. ul->li의 구조를 가집니다.2</li>
-                <li>unordered list 입니다. ul->li의 구조를 가집니다.3</li>
-            </ul>
-            <p class='단락'>이 요소는 단락 요소 입니다.4</p>
-            <p class='단락'>이 요소는 단락 요소 입니다.5</p>
-            <p class='단락'>이 요소는 단락 요소 입니다.6</p>
-            <p class='Div contianer'>Div contianer</p>
-            <p class="txt_line">단락요소 입니다. 구글에 "css 텍스트...처리"를 검색해서 적용해보세요 width=100% 를 적용해보세요!</p>
-            <p class="txt_line">단락요소 입니다. 구글에 "css 텍스트...처리"를 검색해서 적용해보세요 width=100% 를 적용해보세요!</p>
-            <p class="txt_line">단락요소 입니다. 구글에 "css 텍스트...처리"를 검색해서 적용해보세요 width=100% 를 적용해보세요!</p>
-            <a href="https://example.com">Link to example</a>
-    
-        </div>
+        <main>
+            <div id="container">
+                <div>
+                  <div>
+                    <input id="display" type="text" />
+                  </div>
+                  <div>
+                    <input id="result" type="text" />
+                  </div>
+            <div class="button-wrap">
+                <button>AC</button>
+                </div>
+                <div class="button-wrap">
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button>&times;</button>
+                </div>
+                <div class="button-wrap">
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>-</button>
+                </div>
+                <div class="button-wrap">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>+</button>
+                </div>
+                <div class="button-wrap">
+                <button>0</button>
+                <button>,</button>
+                <button>&divide;</button>
+                <button>=</button>
+            </div>
+        </main>
     </body>
 </html>
